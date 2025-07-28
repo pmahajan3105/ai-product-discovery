@@ -8,11 +8,9 @@ import {
   HTTP_METHODS, 
   ACCESS_SCOPES, 
   RESOURCE_TYPES,
-  HttpMethod,
-  AccessScope,
-  ResourceType
+  HttpMethod
 } from '../config/routeConstants';
-import { logger } from './logger';
+// Removed unused imports: AccessScope, ResourceType, logger
 
 export interface ValidationResult {
   valid: boolean;
@@ -506,7 +504,7 @@ function validateLogConfig(
   logConfig: any,
   location: string,
   errors: ValidationError[],
-  warnings: ValidationWarning[]
+  _warnings: ValidationWarning[]
 ): void {
   if (typeof logConfig.request !== 'boolean') {
     errors.push({

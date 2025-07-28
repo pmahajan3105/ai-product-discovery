@@ -3,10 +3,10 @@
  * Handles HTTP requests for customer profile management
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { customerProfileService, CustomerIdentificationData, CustomerSource, CustomerSearchOptions } from '../services/customerProfileService';
 import { SessionRequest } from 'supertokens-node/framework/express';
-import { db } from '../services/database';
+// Removed unused db import
 import { Op } from 'sequelize';
 import Joi from 'joi';
 

@@ -4,7 +4,7 @@
  */
 
 import { routeRegistry, RouteEndpointConfig } from '../config/routeRegistry';
-import { ROUTE_CATEGORIES, ROUTE_STATUS_CODES } from '../config/routeConstants';
+// Removed unused imports ROUTE_CATEGORIES, ROUTE_STATUS_CODES
 import { logger } from './logger';
 
 export interface ApiDocEndpoint {

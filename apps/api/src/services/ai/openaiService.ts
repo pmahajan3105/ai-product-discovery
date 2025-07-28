@@ -96,7 +96,7 @@ export class OpenAIService {
 
     try {
       const completion = await this.openai.chat.completions.create({
-        model: 'gpt-4o-mini', // Using GPT-4 Mini for cost-effectiveness
+        model: 'gpt-4.1-nano', // Using GPT-4.1 Nano for cost-effectiveness
         messages: [
           { role: 'system', content: analysisPrompt },
           { role: 'user', content: `Analyze this feedback: "${feedbackText}"` }
@@ -173,7 +173,7 @@ export class OpenAIService {
 
     try {
       const completion = await this.openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4.1-nano',
         messages: [
           { role: 'system', content: systemPrompt },
           ...messages
@@ -232,7 +232,7 @@ export class OpenAIService {
 
     try {
       const completion = await this.openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4.1-nano',
         messages: [
           { role: 'system', content: dataPrompt },
         ],

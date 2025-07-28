@@ -11,7 +11,6 @@ import { createTestSession } from '../helpers/auth';
 describe('Search Integration Tests', () => {
   let app: Express;
   let organizationId: string;
-  let userId: string;
   let sessionToken: string;
 
   beforeAll(async () => {
@@ -19,7 +18,6 @@ describe('Search Integration Tests', () => {
     
     // Create test user and organization
     const testSession = await createTestSession();
-    userId = testSession.userId;
     organizationId = testSession.organizationId;
     sessionToken = testSession.sessionToken;
   });

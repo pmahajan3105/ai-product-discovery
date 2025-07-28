@@ -180,7 +180,7 @@ GITHUB_CLIENT_SECRET=production_github_secret
 
 # AI Services
 OPENAI_API_KEY=production_openai_key
-OPENAI_MODEL=gpt-4o-mini
+OPENAI_MODEL=gpt-4.1-nano
 OPENAI_MAX_TOKENS=1000
 
 # Email Services

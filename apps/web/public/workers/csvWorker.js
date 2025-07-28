@@ -3,6 +3,8 @@
  * Handles large CSV files in background without blocking main thread
  */
 
+/* global importScripts, Papa */
+
 // Import Papa Parse for the worker
 importScripts('https://unpkg.com/papaparse@5.4.1/papaparse.min.js');
 
@@ -41,7 +43,7 @@ class CSVWorker {
     };
 
     // Estimate file processing for progress
-    let totalEstimatedRows = Math.floor(file.size / 100); // Rough estimate
+    const totalEstimatedRows = Math.floor(file.size / 100); // Rough estimate
 
     this.postMessage({
       type: 'started',

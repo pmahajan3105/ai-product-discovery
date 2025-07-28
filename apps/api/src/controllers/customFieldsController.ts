@@ -3,7 +3,7 @@
  * Handles HTTP requests for custom field management
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { customFieldsService, CreateCustomFieldRequest, UpdateCustomFieldRequest, CustomFieldValue } from '../services/customFieldsService';
 import { SessionRequest } from 'supertokens-node/framework/express';
 import Joi from 'joi';

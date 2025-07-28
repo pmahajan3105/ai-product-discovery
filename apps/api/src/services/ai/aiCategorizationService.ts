@@ -106,7 +106,7 @@ export class AICategorizationService {
         actionSuggestions: analysis.actionSuggestions,
         reasoning: analysis.reasoning,
         processingTime: Date.now() - startTime,
-        aiModel: 'gpt-4o-mini'
+        aiModel: 'gpt-4.1-nano'
       };
 
       // Store analysis result

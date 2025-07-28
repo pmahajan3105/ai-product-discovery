@@ -60,7 +60,7 @@ export class LangChainService {
   private chatModel: ChatOpenAI | null = null;
   private embeddings: OpenAIEmbeddings | null = null;
   private defaultConfig: LangChainConfig = {
-    model: 'gpt-4o-mini',
+    model: 'gpt-4.1-nano',
     temperature: 0.3,
     maxTokens: 1500,
     streaming: false
@@ -366,7 +366,7 @@ Feedback Summary Data:
     });
 
     return new ChatOpenAI({
-      modelName: 'gpt-4o-mini',
+      modelName: 'gpt-4.1-nano',
       temperature: 0.7,
       maxTokens: 2000,
       openAIApiKey: OPENAI_API_KEY,

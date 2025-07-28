@@ -4,7 +4,7 @@
  * Following Zeda patterns for smart customer handling
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { customerService, CreateCustomerData, UpdateCustomerData, CustomerListOptions } from '../services/customerService';
 import { SessionRequest } from 'supertokens-node/framework/express';
 import Joi from 'joi';

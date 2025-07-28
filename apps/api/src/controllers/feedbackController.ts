@@ -3,7 +3,7 @@
  * Handles all feedback-related HTTP requests
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { feedbackService, CreateFeedbackData, UpdateFeedbackData, FeedbackListOptions } from '../services/feedbackService';
 import { SessionRequest } from 'supertokens-node/framework/express';
 import Joi from 'joi';

@@ -499,7 +499,7 @@ describe('Performance and Load Testing Suite', () => {
 
       const startTime = Date.now();
       const responses = await Promise.allSettled(rateLimitTests);
-      const totalTime = Date.now() - startTime;
+      Date.now() - startTime; // Calculate total time but don't store unused
 
       const successful = responses.filter(r => r.status === 'fulfilled').length;
       const failed = responses.filter(r => r.status === 'rejected').length;
@@ -622,7 +622,7 @@ describe('Performance and Load Testing Suite', () => {
       const totalTime = Date.now() - startTime;
 
       const successful = results.filter(r => r.status === 'fulfilled').length;
-      const failed = results.filter(r => r.status === 'rejected').length;
+      results.filter(r => r.status === 'rejected').length; // Calculate failed but don't store unused
 
       // System should maintain minimum service level
       const successRate = successful / extremeLoadOperations;

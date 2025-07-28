@@ -4,7 +4,7 @@
  * Bridges SuperTokens authentication with our user profile system
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { authBridgeService } from '../services/authBridgeService';
 import { userService } from '../services/userService';
 import { SessionRequest } from 'supertokens-node/framework/express';
@@ -140,7 +140,7 @@ export class AuthController {
       const userInfo = req.session!.getAccessTokenPayload();
 
       // Validate request body
-      const { error, value } = syncProfileSchema.validate(req.body);
+      const { error } = syncProfileSchema.validate(req.body);
       if (error) {
         return ResponseBuilder.validationError(res, 
           'Validation Error', 

@@ -4,7 +4,7 @@
  * Following Zeda patterns for validation and error handling
  */
 
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import { userService, CreateUserData, UpdateUserProfileData } from '../services/userService';
 import { SessionRequest } from 'supertokens-node/framework/express';
 import Joi from 'joi';

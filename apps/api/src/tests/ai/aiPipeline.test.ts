@@ -283,7 +283,7 @@ describe('AI Pipeline End-to-End Tests', () => {
         sentimentConfidence: 0.92,
         priority: 'high',
         processingTime: 1500,
-        aiModel: 'gpt-4o-mini',
+        aiModel: 'gpt-4.1-nano',
         reasoning: 'Customer reported performance issues'
       });
 

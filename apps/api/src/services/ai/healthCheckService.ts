@@ -117,7 +117,7 @@ export class AIHealthCheckService {
       // Simple test call to OpenAI (we'll use a minimal request)
       const { ChatOpenAI } = await import('@langchain/openai');
       const model = new ChatOpenAI({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4.1-nano',
         temperature: 0,
         maxTokens: 1,
         openAIApiKey: process.env.OPENAI_API_KEY,
