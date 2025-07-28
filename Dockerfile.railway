@@ -1,0 +1,26 @@
+# Railway Dockerfile for API
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY apps/api/package*.json ./apps/api/
+COPY packages/database/package*.json ./packages/database/
+COPY packages/types/package*.json ./packages/types/
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Build the API
+WORKDIR /app/apps/api
+RUN npm run build
+
+# Expose port
+EXPOSE 3001
+
+# Start command
+CMD ["npm", "start"]
