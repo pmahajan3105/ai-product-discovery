@@ -1,0 +1,28 @@
+{
+  "name": "@feedback-hub/database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FeedbackHub database models and migrations",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "migrate": "node src/sync.mjs",
+    "rollback": "echo 'Rollback not supported with sync method'",
+    "migration:status": "echo 'Status not supported with sync method'", 
+    "db:setup": "node src/sync.mjs",
+    "seed": "sequelize-cli db:seed:all",
+    "seed:undo": "sequelize-cli db:seed:undo:all"
+  },
+  "dependencies": {
+    "sequelize": "^6.35.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2",
+    "@types/pg": "^8.10.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3",
+    "sqlite3": "^5.1.6"
+  }
+}

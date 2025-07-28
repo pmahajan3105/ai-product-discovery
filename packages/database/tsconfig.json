@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src", 
+    "declaration": true,
+    "noEmit": false,
+    "module": "ES2020",
+    "target": "ES2020",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist", 
+    "src/migrate.js",
+    "src/sync.js",
+    "src/sync.mjs",
+    "src/migrations/*.js"
+  ]
+}
