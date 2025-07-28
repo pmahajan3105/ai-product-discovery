@@ -12,20 +12,12 @@ import {
   SCOPE_AUTHENTICATED,
   SCOPE_ORGANIZATION,
   SCOPE_SYSTEM,
-  RESOURCE_AUTHENTICATION,
-  RESOURCE_ORGANIZATION,
-  RESOURCE_FEEDBACK,
-  RESOURCE_CUSTOMER,
-  RESOURCE_INTEGRATION,
-  RESOURCE_ANALYTICS,
-  RESOURCE_API_KEY,
-  RESOURCE_SYSTEM,
+  RESOURCE_TYPES,
+  ACCESS_SCOPES,
   RATE_LIMIT_PRESETS,
   LOG_PRESETS,
   ROUTE_CATEGORIES,
-  HttpMethod,
-  AccessScope,
-  ResourceType
+  HttpMethod
 } from './routeConstants';
 
 import {
@@ -47,7 +39,6 @@ import {
   VIEW_FEEDBACK,
   UPDATE_FEEDBACK,
   DELETE_FEEDBACK,
-  MANAGE_FEEDBACK_SETTINGS,
   ASSIGN_FEEDBACK,
   EXPORT_FEEDBACK,
 
@@ -62,7 +53,6 @@ import {
   // Integration permissions
   VIEW_INTEGRATIONS,
   MANAGE_INTEGRATIONS,
-  CREATE_INTEGRATION,
   UPDATE_INTEGRATION,
   DELETE_INTEGRATION,
   SYNC_INTEGRATIONS,
@@ -77,20 +67,18 @@ import {
   // API permissions
   MANAGE_API_KEYS,
   VIEW_API_LOGS,
-  MANAGE_WEBHOOKS,
 
   // Advanced permissions
   BULK_OPERATIONS,
-  DATA_EXPORT,
   DATA_IMPORT
 } from '../permissions/PermissionConfig';
 
 // Enhanced route configuration interface
 export interface RouteEndpointConfig {
   endpoint: string;
-  scope: AccessScope;
+  scope: keyof typeof ACCESS_SCOPES | string;
   requiredPermissions: string[];
-  resource?: ResourceType;
+  resource?: keyof typeof RESOURCE_TYPES;
   rateLimit?: {
     windowMs: number;
     maxRequests: number;
@@ -109,12 +97,12 @@ export interface RouteEndpointConfig {
 }
 
 export interface RouteModuleConfig {
-  defaultScope?: AccessScope;
+  defaultScope?: keyof typeof ACCESS_SCOPES | string;
   requiredPermissions?: string[];
-  resource?: ResourceType;
+  resource?: keyof typeof RESOURCE_TYPES;
   category?: string;
   description?: string;
-  [method: string]: any;
+  [method: string]: unknown;
 }
 
 export interface RouteVersionConfig {
@@ -132,7 +120,7 @@ export const routeRegistry: RouteConfig = {
     health: {
       defaultScope: SCOPE_PUBLIC,
       requiredPermissions: [],
-      resource: RESOURCE_SYSTEM,
+      resource: 'FEEDBACK',
       category: ROUTE_CATEGORIES.SYSTEM_ADMINISTRATION,
       description: 'System health monitoring endpoints',
       [METHOD_GET]: [

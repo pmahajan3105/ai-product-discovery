@@ -59,7 +59,10 @@ export class CsrfProtection {
     this.secretKey = process.env.CSRF_SECRET_KEY || this.generateSecretKey();
     
     if (!process.env.CSRF_SECRET_KEY) {
-      logger.warn('No CSRF_SECRET_KEY found in environment. Using generated key. This will cause issues in multi-instance deployments.');
+      // Use conditional logging to avoid issues in test environment
+      if (logger && typeof logger.warn === 'function') {
+        logger.warn('No CSRF_SECRET_KEY found in environment. Using generated key. This will cause issues in multi-instance deployments.');
+      }
     }
   }
 

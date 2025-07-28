@@ -97,7 +97,7 @@ export const SuperTokensConfig: TypeInput = {
         service: {
           sendEmail: async (input) => {
             // Use SMTP service to send magic link emails
-            const nodemailer = require('nodemailer');
+            const nodemailer = await import('nodemailer');
             
             const transporter = nodemailer.createTransporter({
               host: process.env.SMTP_HOST,

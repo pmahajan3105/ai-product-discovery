@@ -145,7 +145,7 @@ export class CustomerProfileController {
   async updateCustomerActivity(req: SessionRequest, res: Response, next: NextFunction) {
     try {
       const { customerId } = req.params;
-      const { source, activityData } = req.body;
+      const { source } = req.body;
 
       // Validate source
       if (!Object.values(CustomerSource).includes(source)) {
@@ -253,7 +253,7 @@ export class CustomerProfileController {
 
       res.json({
         success: true,
-        data: companies.map((c: any) => ({
+        data: companies.map((c: { company: string; dataValues: { customerCount: string } }) => ({
           name: c.company,
           customerCount: parseInt(c.dataValues.customerCount)
         }))
@@ -282,7 +282,7 @@ export class CustomerProfileController {
       const results = {
         created: 0,
         updated: 0,
-        errors: [] as any[]
+        errors: [] as Array<{ row: number; error: string }>
       };
 
       // Process customers in batches
