@@ -72,7 +72,7 @@ export const ChatSources: React.FC<ChatSourcesProps> = ({
             </p>
           </div>
         ) : (
-          sources.map((source, index) => (
+          sources.map((source, _index) => (
             <div
               key={source.feedbackId}
               className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 space-y-3"

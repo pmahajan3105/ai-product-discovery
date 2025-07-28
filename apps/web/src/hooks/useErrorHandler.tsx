@@ -384,14 +384,15 @@ export function useErrorHandler() {
 export function useAsyncOperation() {
   const { handleError, showToast } = useErrorHandler();
   
-  const execute = useCallback(async <T>(
-    operation: () => Promise<T>,
-    options?: {
-      successMessage?: string;
-      errorContext?: Record<string, any>;
-      showSuccess?: boolean;
-    }
-  ): Promise<T | null> => {
+  const execute = useCallback(
+    async (
+      operation: () => Promise<any>,
+      options?: {
+        successMessage?: string;
+        errorContext?: Record<string, any>;
+        showSuccess?: boolean;
+      }
+    ): Promise<any> => {
     try {
       const result = await operation();
       

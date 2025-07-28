@@ -209,7 +209,7 @@ export function FeedbackTable({
     category: [],
     assignedTo: [],
     sortBy: 'createdAt',
-    sortOrder: 'DESC' as 'DESC',
+    sortOrder: 'DESC' as const,
     page: 1,
     limit: 25,
     updateState: () => {}

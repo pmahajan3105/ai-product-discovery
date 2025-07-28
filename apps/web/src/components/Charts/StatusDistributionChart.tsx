@@ -229,7 +229,7 @@ export const StatusDistributionChart: React.FC<StatusDistributionChartProps> = (
           </CenterStats>
         </ChartWrapper>
         <LegendWrapper>
-          {data.map((item, index) => (
+          {data.map((item, _index) => (
             <LegendItem
               key={item.status}
               clickable={!!onStatusClick}

@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { FlexContainer, Container, Text, Button } from '../Zeda';
-import { Colors, FontSize, FontWeight, ColorFamily } from '../../theme/colors';
+import { Colors, ColorFamily } from '../../theme/colors';
 import { FlexAlignItems, FlexDirection, FlexJustify } from '../../theme/layout';
 import { useCSVWorker, processCSVFallback, CSVProcessingProgress } from '../../hooks/useCSVWorker';
 import { validateCSVFile } from '../../lib/csv/StreamingCSVParser';

@@ -33,45 +33,22 @@ export const SCOPE_AUTHENTICATED = 'AUTHENTICATED';
 export const SCOPE_ORGANIZATION = 'ORGANIZATION';
 export const SCOPE_SYSTEM = 'SYSTEM';
 
-export const ACCESS_SCOPES = [
-  SCOPE_PUBLIC,
-  SCOPE_AUTHENTICATED,
-  SCOPE_ORGANIZATION,
-  SCOPE_SYSTEM
-] as const;
-
-export type AccessScope = typeof ACCESS_SCOPES[number];
+export const ACCESS_SCOPES = {
+  READ: 'read',
+  WRITE: 'write',
+  DELETE: 'delete',
+  ADMIN: 'admin'
+} as const;
 
 // Resource Types - for consistent resource identification
-export const RESOURCE_AUTHENTICATION = 'authentication';
-export const RESOURCE_ORGANIZATION = 'organization';
-export const RESOURCE_USER = 'user';
-export const RESOURCE_FEEDBACK = 'feedback';
-export const RESOURCE_CUSTOMER = 'customer';
-export const RESOURCE_INTEGRATION = 'integration';
-export const RESOURCE_ANALYTICS = 'analytics';
-export const RESOURCE_API_KEY = 'api_key';
-export const RESOURCE_WEBHOOK = 'webhook';
-export const RESOURCE_CUSTOM_FIELD = 'custom_field';
-export const RESOURCE_EXPORT = 'export';
-export const RESOURCE_SYSTEM = 'system';
-
-export const RESOURCE_TYPES = [
-  RESOURCE_AUTHENTICATION,
-  RESOURCE_ORGANIZATION,
-  RESOURCE_USER,
-  RESOURCE_FEEDBACK,
-  RESOURCE_CUSTOMER,
-  RESOURCE_INTEGRATION,
-  RESOURCE_ANALYTICS,
-  RESOURCE_API_KEY,
-  RESOURCE_WEBHOOK,
-  RESOURCE_CUSTOM_FIELD,
-  RESOURCE_EXPORT,
-  RESOURCE_SYSTEM
-] as const;
-
-export type ResourceType = typeof RESOURCE_TYPES[number];
+export const RESOURCE_TYPES = {
+  FEEDBACK: 'feedback',
+  CUSTOMER: 'customer',
+  ORGANIZATION: 'organization',
+  USER: 'user',
+  INTEGRATION: 'integration',
+  CUSTOM_FIELD: 'custom_field'
+} as const;
 
 // Rate Limiting Configurations
 export const RATE_LIMIT_PRESETS = {
@@ -185,18 +162,6 @@ export default {
   ACCESS_SCOPES,
 
   // Resources
-  RESOURCE_AUTHENTICATION,
-  RESOURCE_ORGANIZATION,
-  RESOURCE_USER,
-  RESOURCE_FEEDBACK,
-  RESOURCE_CUSTOMER,
-  RESOURCE_INTEGRATION,
-  RESOURCE_ANALYTICS,
-  RESOURCE_API_KEY,
-  RESOURCE_WEBHOOK,
-  RESOURCE_CUSTOM_FIELD,
-  RESOURCE_EXPORT,
-  RESOURCE_SYSTEM,
   RESOURCE_TYPES,
 
   // Configurations

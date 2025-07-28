@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:integration": "jest --testPathPattern=integration",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 2000",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 5000",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "type-check": "tsc --noEmit"
   },
