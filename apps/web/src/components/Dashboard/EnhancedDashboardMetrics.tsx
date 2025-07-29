@@ -163,7 +163,7 @@ const MetricTrend = styled.div<{ direction: 'up' | 'down' | 'neutral' }>`
       case 'up':
         return `color: ${Colors.success600};`;
       case 'down':
-        return `color: ${Colors.red600};`;
+        return `color: ${Colors.error600};`;
       default:
         return `color: ${Colors.grey500};`;
     }
@@ -288,7 +288,7 @@ export const EnhancedDashboardMetrics: React.FC<EnhancedDashboardMetricsProps> =
           onClick={() => onMetricClick?.('total_feedback', metrics.totalFeedback)}
         >
           <MetricHeader>
-            <MetricIcon color={Colors.blue500}>
+            <MetricIcon color={Colors.info500}>
               <MessageSquare size={24} />
             </MetricIcon>
             <MetricTitle>Total Feedback</MetricTitle>

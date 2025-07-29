@@ -70,8 +70,8 @@ const MetaValue = styled.span`
 const SourceBadge = styled.span`
   display: inline-block;
   padding: 2px 8px;
-  background: ${Colors.blue50};
-  color: ${Colors.blue700};
+  background: ${Colors.info50};
+  color: ${Colors.info700};
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
@@ -147,7 +147,7 @@ const FeedbackTitle = styled.h3`
     text-decoration: none;
     
     &:hover {
-      color: ${Colors.blue600};
+      color: ${Colors.info600};
     }
   }
 `;
@@ -172,9 +172,9 @@ const StatusBadge = styled.span<{ status: string }>`
       case 'open':
         return `background: ${Colors.orange50}; color: ${Colors.orange700};`;
       case 'in_progress':
-        return `background: ${Colors.blue50}; color: ${Colors.blue700};`;
+        return `background: ${Colors.info50}; color: ${Colors.info700};`;
       case 'resolved':
-        return `background: ${Colors.success50}; color: ${Colors.green700};`;
+        return `background: ${Colors.success50}; color: ${Colors.success700};`;
       case 'closed':
         return `background: ${Colors.grey100}; color: ${Colors.grey700};`;
       default:

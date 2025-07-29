@@ -309,11 +309,11 @@ export const IntegrationHealthStatus: React.FC<IntegrationHealthStatusProps> = (
               <FlexContainer
                 direction={FlexDirection.column}
                 padding={{ all: 16 }}
-                bgColor={Colors.blue25}
+                bgColor={Colors.info25}
                 border={{ radius: 8 }}
                 flex="1"
               >
-                <Text fontSize={FontSize.text_xl} fontWeight={FontWeight.bold} color={Colors.blue700}>
+                <Text fontSize={FontSize.text_xl} fontWeight={FontWeight.bold} color={Colors.info700}>
                   {health.metrics.totalEvents}
                 </Text>
                 <Text fontSize={FontSize.text_sm} color={Colors.grey600}>

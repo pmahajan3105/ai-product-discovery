@@ -7,7 +7,7 @@ import { useAuth } from '../hooks/useAuth';
 
 const Container = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, ${Colors.blue50} 0%, ${Colors.white} 100%);
+  background: linear-gradient(135deg, ${Colors.info50} 0%, ${Colors.white} 100%);
   display: flex;
   flex-direction: column;
 `;
@@ -24,7 +24,7 @@ const Header = styled.header`
 const Logo = styled.div`
   font-size: 24px;
   font-weight: 700;
-  color: ${Colors.blue600};
+  color: ${Colors.info600};
 `;
 
 const HeaderActions = styled.div`
@@ -78,7 +78,7 @@ const CTASection = styled.div`
 `;
 
 const PrimaryButton = styled(Button)`
-  background: ${Colors.blue600};
+  background: ${Colors.info600};
   color: ${Colors.white};
   border: none;
   padding: 14px 32px;
@@ -86,7 +86,7 @@ const PrimaryButton = styled(Button)`
   font-weight: 600;
   
   &:hover {
-    background: ${Colors.blue700};
+    background: ${Colors.info700};
   }
   
   @media (max-width: 768px) {

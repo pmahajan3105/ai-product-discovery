@@ -106,13 +106,13 @@ const DataCount = styled.div`
 `;
 
 const FilterSummary = styled.div`
-  background: ${Colors.blue50};
-  border: 1px solid ${Colors.blue200};
+  background: ${Colors.info50};
+  border: 1px solid ${Colors.info200};
   border-radius: 4px;
   padding: 12px;
   margin-top: 12px;
   font-size: 12px;
-  color: ${Colors.blue700};
+  color: ${Colors.info700};
 `;
 
 const RadioGroup = styled.div`

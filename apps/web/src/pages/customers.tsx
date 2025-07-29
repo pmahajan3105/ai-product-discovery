@@ -69,8 +69,8 @@ const CompanyName = styled.div`
 const SourceBadge = styled.span`
   display: inline-block;
   padding: 2px 8px;
-  background: ${Colors.blue50};
-  color: ${Colors.blue700};
+  background: ${Colors.info50};
+  color: ${Colors.info700};
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;

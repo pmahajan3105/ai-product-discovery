@@ -161,7 +161,7 @@ const SuggestionIcon = styled.div<{ type: string }>`
   border-radius: 4px;
   background: ${props => {
     switch (props.type) {
-      case 'category': return Colors.blue100;
+      case 'category': return Colors.info100;
       case 'status': return Colors.success100;
       case 'priority': return Colors.orange100;
       case 'timeframe': return Colors.purple100;
@@ -170,7 +170,7 @@ const SuggestionIcon = styled.div<{ type: string }>`
   }};
   color: ${props => {
     switch (props.type) {
-      case 'category': return Colors.blue600;
+      case 'category': return Colors.info600;
       case 'status': return Colors.success600;
       case 'priority': return Colors.orange600;
       case 'timeframe': return Colors.purple600;

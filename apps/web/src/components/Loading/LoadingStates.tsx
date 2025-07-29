@@ -44,11 +44,11 @@ const InlineLoadingContainer = styled.div`
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: ${Colors.blue50};
-  border: 1px solid ${Colors.blue200};
+  background: ${Colors.info50};
+  border: 1px solid ${Colors.info200};
   border-radius: 6px;
   font-size: 14px;
-  color: ${Colors.blue700};
+  color: ${Colors.info700};
 `;
 
 interface InlineLoadingProps {
@@ -199,14 +199,14 @@ const ErrorContainer = styled.div`
   padding: 40px 20px;
   text-align: center;
   background: ${Colors.white};
-  border: 1px solid ${Colors.red200};
+  border: 1px solid ${Colors.error200};
   border-radius: 8px;
 `;
 
 const ErrorIcon = styled.div`
   width: 48px;
   height: 48px;
-  background: ${Colors.red100};
+  background: ${Colors.error100};
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -214,7 +214,7 @@ const ErrorIcon = styled.div`
   margin-bottom: 16px;
   
   svg {
-    color: ${Colors.red600};
+    color: ${Colors.error600};
   }
 `;
 

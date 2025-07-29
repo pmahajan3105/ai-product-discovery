@@ -140,10 +140,10 @@ const TotalLabel = styled.div`
 
 // Status color mapping
 const statusColors: Record<string, string> = {
-  new: Colors.blue500,
+  new: Colors.info500,
   triaged: Colors.orange500,
   planned: Colors.purple500,
-  in_progress: Colors.yellow500,
+  in_progress: Colors.warning500,
   resolved: Colors.success500,
   archived: Colors.grey400,
 };

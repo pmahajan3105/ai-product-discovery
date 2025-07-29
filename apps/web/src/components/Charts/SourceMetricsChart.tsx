@@ -66,14 +66,14 @@ const TotalCount = styled.div`
 
 // Source color mapping
 const sourceColors: Record<string, string> = {
-  dashboard: Colors.blue500,
+  dashboard: Colors.info500,
   widget: Colors.success500,
   slack: Colors.purple500,
   zendesk: Colors.orange500,
-  intercom: Colors.teal500,
-  api: Colors.indigo500,
-  csv: Colors.pink500,
-  email: Colors.red500,
+  intercom: Colors.info600,
+  api: Colors.primary600,
+  csv: Colors.purple600,
+  email: Colors.error500,
 };
 
 export const SourceMetricsChart: React.FC<SourceMetricsChartProps> = ({
