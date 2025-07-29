@@ -12,13 +12,14 @@
     "test": "echo \"No tests configured for web package yet\""
   },
   "dependencies": {
-    "@feedback-hub/types": "file:../../packages/types",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@feedback-hub/types": "file:../../packages/types",
     "@tanstack/react-query": "^5.8.4",
     "@types/multer": "^2.0.0",
     "axios": "^1.6.2",
     "chart.js": "^4.4.0",
+    "date-fns": "^4.1.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.525.0",
     "multer": "^2.0.2",

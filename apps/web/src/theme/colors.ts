@@ -128,4 +128,23 @@ export enum ColorFamily {
   purple = 'purple',
 }
 
+export enum FontSize {
+  xs = '12px',
+  sm = '14px',
+  base = '16px',
+  lg = '18px',
+  xl = '20px',
+  '2xl' = '24px',
+  '3xl' = '30px',
+  '4xl' = '36px',
+}
+
+export enum FontWeight {
+  light = '300',
+  normal = '400',
+  medium = '500',
+  semibold = '600',
+  bold = '700',
+}
+
 export type ColorKey = keyof typeof Colors;
