@@ -418,7 +418,7 @@ export class TransactionRecovery {
         const healthKey = `${this.HEALTH_METRICS_KEY}:${timeRange}`;
         const existingData = await redisClient.hGet(healthKey, 'data');
         
-        let health: TransactionHealth = existingData ? 
+        const health: TransactionHealth = existingData ? 
           JSON.parse(existingData) : this.getDefaultHealthMetrics();
 
         // Update metrics

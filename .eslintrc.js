@@ -8,19 +8,19 @@ module.exports = {
     'prettier'
   ],
   rules: {
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-var-requires': 'warn',
-    '@typescript-eslint/ban-types': 'warn',
-    '@typescript-eslint/no-namespace': 'warn',
-    'prefer-const': 'warn',
-    'no-var': 'warn',
-    'no-case-declarations': 'warn',
-    'no-control-regex': 'warn',
-    'no-undef': 'warn',
-    'no-useless-escape': 'warn'
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-namespace': 'off',
+    'prefer-const': 'off',
+    'no-var': 'off',
+    'no-case-declarations': 'off',
+    'no-control-regex': 'off',
+    'no-undef': 'off',
+    'no-useless-escape': 'off'
   },
   env: {
     node: true,

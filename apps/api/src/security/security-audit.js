@@ -227,7 +227,7 @@ class SecurityAudit {
               "' UNION SELECT * FROM users --"
             ];
 
-            let vulnerableEndpoints = [];
+            const vulnerableEndpoints = [];
 
             // Test search endpoint with SQL injection
             for (const payload of maliciousPayloads) {
@@ -283,7 +283,7 @@ class SecurityAudit {
               '<img src=x onerror=alert("xss")>'
             ];
 
-            let vulnerableFields = [];
+            const vulnerableFields = [];
 
             for (const payload of xssPayloads) {
               try {
@@ -609,7 +609,7 @@ class SecurityAudit {
               '/api/feedback/test-feedback-id'
             ];
 
-            let unprotectedEndpoints = [];
+            const unprotectedEndpoints = [];
 
             for (const endpoint of protectedEndpoints) {
               try {
@@ -741,7 +741,7 @@ class SecurityAudit {
               { method: 'POST', url: '/api/search/test-org/natural', data: { invalid: 'data' } }
             ];
 
-            let exposureRisks = [];
+            const exposureRisks = [];
 
             for (const request of testRequests) {
               try {
