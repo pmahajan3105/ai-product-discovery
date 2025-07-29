@@ -162,7 +162,7 @@ const SuggestionIcon = styled.div<{ type: string }>`
   background: ${props => {
     switch (props.type) {
       case 'category': return Colors.blue100;
-      case 'status': return Colors.green100;
+      case 'status': return Colors.success100;
       case 'priority': return Colors.orange100;
       case 'timeframe': return Colors.purple100;
       default: return Colors.grey100;
@@ -171,7 +171,7 @@ const SuggestionIcon = styled.div<{ type: string }>`
   color: ${props => {
     switch (props.type) {
       case 'category': return Colors.blue600;
-      case 'status': return Colors.green600;
+      case 'status': return Colors.success600;
       case 'priority': return Colors.orange600;
       case 'timeframe': return Colors.purple600;
       default: return Colors.grey600;
@@ -198,7 +198,7 @@ const SuggestionContext = styled.div`
 const SuggestionConfidence = styled.div<{ confidence: number }>`
   font-size: 11px;
   font-weight: 500;
-  color: ${props => props.confidence > 0.8 ? Colors.green600 : 
+  color: ${props => props.confidence > 0.8 ? Colors.success600 : 
               props.confidence > 0.6 ? Colors.orange600 : Colors.grey500};
 `;
 

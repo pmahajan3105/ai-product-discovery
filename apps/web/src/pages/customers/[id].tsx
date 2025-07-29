@@ -174,7 +174,7 @@ const StatusBadge = styled.span<{ status: string }>`
       case 'in_progress':
         return `background: ${Colors.blue50}; color: ${Colors.blue700};`;
       case 'resolved':
-        return `background: ${Colors.green50}; color: ${Colors.green700};`;
+        return `background: ${Colors.success50}; color: ${Colors.green700};`;
       case 'closed':
         return `background: ${Colors.grey100}; color: ${Colors.grey700};`;
       default:

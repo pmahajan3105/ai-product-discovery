@@ -120,12 +120,12 @@ export const FeedbackTrendsChart: React.FC<FeedbackTrendsChartProps> = ({
       {
         label: 'Resolved',
         data: data.map(item => item.resolved),
-        borderColor: Colors.green500,
-        backgroundColor: Colors.green100,
+        borderColor: Colors.success500,
+        backgroundColor: Colors.success100,
         borderWidth: 2,
         fill: true,
         tension: 0.4,
-        pointBackgroundColor: Colors.green500,
+        pointBackgroundColor: Colors.success500,
         pointBorderColor: Colors.white,
         pointBorderWidth: 2,
         pointRadius: 4,
@@ -234,7 +234,7 @@ export const FeedbackTrendsChart: React.FC<FeedbackTrendsChartProps> = ({
             New Feedback
           </LegendItem>
           <LegendItem>
-            <LegendColor color={Colors.green500} />
+            <LegendColor color={Colors.success500} />
             Resolved
           </LegendItem>
         </ChartLegend>

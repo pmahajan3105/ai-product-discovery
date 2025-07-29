@@ -161,7 +161,7 @@ const MetricTrend = styled.div<{ direction: 'up' | 'down' | 'neutral' }>`
   ${props => {
     switch (props.direction) {
       case 'up':
-        return `color: ${Colors.green600};`;
+        return `color: ${Colors.success600};`;
       case 'down':
         return `color: ${Colors.red600};`;
       default:
@@ -322,7 +322,7 @@ export const EnhancedDashboardMetrics: React.FC<EnhancedDashboardMetricsProps> =
           onClick={() => onMetricClick?.('resolved_feedback', metrics.resolvedFeedback)}
         >
           <MetricHeader>
-            <MetricIcon color={Colors.green500}>
+            <MetricIcon color={Colors.success500}>
               <CheckCircle size={24} />
             </MetricIcon>
             <MetricTitle>Resolved</MetricTitle>

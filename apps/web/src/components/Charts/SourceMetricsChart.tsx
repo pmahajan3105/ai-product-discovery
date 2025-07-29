@@ -67,7 +67,7 @@ const TotalCount = styled.div`
 // Source color mapping
 const sourceColors: Record<string, string> = {
   dashboard: Colors.blue500,
-  widget: Colors.green500,
+  widget: Colors.success500,
   slack: Colors.purple500,
   zendesk: Colors.orange500,
   intercom: Colors.teal500,

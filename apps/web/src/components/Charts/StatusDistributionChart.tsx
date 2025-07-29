@@ -144,7 +144,7 @@ const statusColors: Record<string, string> = {
   triaged: Colors.orange500,
   planned: Colors.purple500,
   in_progress: Colors.yellow500,
-  resolved: Colors.green500,
+  resolved: Colors.success500,
   archived: Colors.grey400,
 };
 

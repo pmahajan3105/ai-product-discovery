@@ -10,7 +10,7 @@ const nextConfig = {
 
   // Environment variables to expose to client-side
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001',
   },
 
   // Redirect root to sign-in page for now
