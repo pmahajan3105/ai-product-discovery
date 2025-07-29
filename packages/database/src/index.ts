@@ -1,17 +1,17 @@
 import { Sequelize } from 'sequelize';
-import { initUser, User } from './models/user.js';
-import { initOrganization, Organization } from './models/organization.js';
-import { initOrganizationUser, OrganizationUser } from './models/organizationUser.js';
-import { initCustomer, Customer } from './models/customer.js';
-import { initIntegration, Integration } from './models/integration.js';
-import { initFeedback, Feedback } from './models/feedback.js';
-import { initComment, Comment } from './models/comment.js';
-import { initFilterPreset, FilterPreset } from './models/filterPreset.js';
-import { CompanyProfile } from './models/CompanyProfile.js';
-import { AIUserFeedback } from './models/aiUserFeedback.js';
-import { FeedbackEmbedding } from './models/feedbackEmbedding.js';
-import { AICategorizationLog } from './models/aiCategorizationLog.js';
-import { AIChatSession } from './models/aiChatSession.js';
+import { initUser, User } from './models/user';
+import { initOrganization, Organization } from './models/organization';
+import { initOrganizationUser, OrganizationUser } from './models/organizationUser';
+import { initCustomer, Customer } from './models/customer';
+import { initIntegration, Integration } from './models/integration';
+import { initFeedback, Feedback } from './models/feedback';
+import { initComment, Comment } from './models/comment';
+import { initFilterPreset, FilterPreset } from './models/filterPreset';
+import { CompanyProfile } from './models/CompanyProfile';
+import { AIUserFeedback } from './models/aiUserFeedback';
+import { FeedbackEmbedding } from './models/feedbackEmbedding';
+import { AICategorizationLog } from './models/aiCategorizationLog';
+import { AIChatSession } from './models/aiChatSession';
 
 // Database connection with optimized pooling
 export const createDatabase = (databaseUrl?: string): Sequelize => {
@@ -426,16 +426,16 @@ export {
   AIChatSession,
 };
 
-export * from './models/user.js';
-export * from './models/organization.js';
-export * from './models/organizationUser.js';
-export * from './models/customer.js';
-export * from './models/integration.js';
-export * from './models/feedback.js';
-export * from './models/comment.js';
-export * from './models/filterPreset.js';
-export * from './models/CompanyProfile.js';
-export * from './models/aiUserFeedback.js';
-export * from './models/feedbackEmbedding.js';
-export * from './models/aiCategorizationLog.js';
-export * from './models/aiChatSession.js';
+export * from './models/user';
+export * from './models/organization';
+export * from './models/organizationUser';
+export * from './models/customer';
+export * from './models/integration';
+export * from './models/feedback';
+export * from './models/comment';
+export * from './models/filterPreset';
+export * from './models/CompanyProfile';
+export * from './models/aiUserFeedback';
+export * from './models/feedbackEmbedding';
+export * from './models/aiCategorizationLog';
+export * from './models/aiChatSession';

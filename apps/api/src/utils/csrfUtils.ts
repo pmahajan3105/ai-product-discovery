@@ -356,9 +356,12 @@ export class CsrfTokenManager {
       }
     }, this.CLEANUP_INTERVAL);
 
-    logger.info('CSRF token cleanup scheduler started', {
-      interval: this.CLEANUP_INTERVAL
-    });
+    // Use conditional logging to avoid issues in test environment
+    if (logger && typeof logger.info === 'function') {
+      logger.info('CSRF token cleanup scheduler started', {
+        interval: this.CLEANUP_INTERVAL
+      });
+    }
   }
 }
 
