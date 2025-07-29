@@ -1,4 +1,4 @@
-# Railway Dockerfile for API
+# Railway Dockerfile for API - Simplified
 FROM node:18-alpine
 
 WORKDIR /app
@@ -6,21 +6,21 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 COPY apps/api/package*.json ./apps/api/
-COPY packages/database/package*.json ./packages/database/
-COPY packages/types/package*.json ./packages/types/
 
-# Install dependencies
+# Install dependencies including dev dependencies for ts-node
 RUN npm install
 
 # Copy source code
 COPY . .
 
-# Build the API
+# Change to API directory
 WORKDIR /app/apps/api
-RUN npm run build
+
+# Install ts-node globally for runtime TypeScript execution
+RUN npm install -g ts-node typescript
 
 # Expose port
 EXPOSE 3001
 
-# Start command
-CMD ["npm", "start"]
+# Use ts-node to run TypeScript directly without building
+CMD ["npx", "ts-node", "src/index.ts"]
